@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>OUR INDEX PAGE</h3>
+    <p>Our index template HTML page</p>
+
+    {{% if latest_questions_list % }}
+    <ul>
+        {{% for question in latest_questions_list  %}}
+        <li><a href="/polls/{{question.id}}/"></a> {{question.text_question}}  </li>
+        {{% endfor %}}
+    </ul>
+
+    {{%else%}}
+
+    <p>No polls available</p>
+    {{% endif %}}
+
+
+</body> 
+</html>
