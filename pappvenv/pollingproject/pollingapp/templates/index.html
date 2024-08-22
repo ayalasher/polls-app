@@ -7,16 +7,16 @@
 </head>
 <body>
     <h3>POLLING APP</h3>
-    {{%if latest_questions_list %}}
+    {% if latest_questions_list %}
     <ul>
-        {{% for question in latest_questions_list% %}}
+        {% for question in latest_questions_list %}
         <li>
             <a href="/polls/{{question.id}}/">{{question.text_question}}</a>
         </li>
-        {{% endfor %}}
+        {% endfor %}
     </ul>
-    {{% else %}}
+    {% else %}
     <p>No polls available</p>
-    {{% endif %}}
+    {% endif %}
 </body>
 </html>
