@@ -28,3 +28,4 @@ def results(request,question_id):
 
 def vote(request,question_id):
     return HttpResponse("You are looking at the votes of the question %s ."  %question_id )
+# 
