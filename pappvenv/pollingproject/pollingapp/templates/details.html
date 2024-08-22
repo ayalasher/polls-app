@@ -7,6 +7,12 @@
 </head>
 <body>
     <h3>DETAILS PAGE !!</h3>
-    {{question}}
+    <h5>{{ questiion.text_question }}</h5>
+
+    <ul>
+        {% for choice in quetion.choice_set.all %}
+        <li> {{choice.choice_text}} </li>
+        {% endfor %}
+    </ul>
 </body>
 </html>
